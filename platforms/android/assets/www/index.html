@@ -54,7 +54,7 @@ function onFileSystemSuccess(fs) {
 
 ///////////////////////
 function msg( msg) {
-	var dom = get ElementById( "msg");
+	var dom = document.getElementById( "msg");
 	dom.innerHTML += "<br>"+msg ; 
 }
 </script>
@@ -65,17 +65,18 @@ function msg( msg) {
     
 Hello World
 <br>
+<button onclick="onDeviceReady();">odr</button><br>
 <div id="msg">
 </div>
-
+<!--
         <script type="text/javascript" src="cordova.js"></script>
+-->
         <script type="text/javascript">
 msg("add");
         document.addEventListener('deviceready', onDeviceReady, false);
-
       //onDeviceReady() ;
       //consolelog("hello");
- //     alert("lfs:"+typeof(LocalFileSystem));        
+msg(">>lfs:"+typeof(LocalFileSystem));        
       </script>
     </body>
 </html>
